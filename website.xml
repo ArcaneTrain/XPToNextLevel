@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D&D Character Level Up Calculator</title>
+  </head>
+  <body>
+    <h1>D&D Character Level Up Calculator</h1>
+    <p>Welcome to the D&D Character Level Up Calculator! Enter in your current XP and find out how much more you need to level up!</p>
+
+    <form action="">
+      <label for="currentXP">Current XP:</label>
+      <input type="number" id="currentXP" name="currentXP"/>
+      <input type="submit" value="Calculate"/>
+    </form>
+
+    <div id="output">
+      <!-- Output will be populated here -->
+    </div>
+
+    <script>
+      // Select the form
+      const form = document.querySelector('form');
+
+      // Select the output div
+      const output = document.querySelector('#output');
+
+      // Listen for a form submission
+      form.addEventListener('submit', (event) => {
+        // Prevent the default behavior (which would reload the page)
+        event.preventDefault();
+
+        // Get the current XP from the form
+        const currentXP = parseInt(document.querySelector('#currentXP').value);
+
+        // Calculate the XP needed to reach the next level
+        let xpNeeded = 0;
+        if (currentXP < 300) {
+          xpNeeded = 300 - currentXP;
+        } else if (currentXP < 900) {
+          xpNeeded = 900 - currentXP;
+        } else if (currentXP < 2700) {
+          xpNeeded = 2700 - currentXP;
+        } else if (currentXP < 6500) {
+          xpNeeded = 6500 - currentXP;
+        } else if (currentXP < 14000) {
+          xpNeeded = 14000 - currentXP;
+        } else if (currentXP < 23000) {
+          xpNeeded = 23000 - currentXP;
+        } else if (currentXP < 34000) {
+          xpNeeded = 34000 - currentXP;
+        } else if (currentXP < 48000) {
+          xpNeeded = 48000 - currentXP;
+        } else if (currentXP < 64000) {
+          xpNeeded = 64000 - currentXP;
+        } else if (currentXP < 85000) {
+          xpNeeded = 85000 - currentXP;
+        } else if (currentXP < 100000) {
+          xpNeeded = 100000 - currentXP;
+        } else if (currentXP < 120000) {
+          xpNeeded = 120000 - currentXP;
+        } else if (currentXP < 140000) {
+          xpNeeded = 140000 - currentXP;
+        } else if (currentXP < 165000) {
+          xpNeeded = 165000 - currentXP;
+        } else if (currentXP < 195000) {
+          xpNeeded = 195000 - currentXP;
+        } else if (currentXP < 225000) {
+          xpNeeded = 225000 - currentXP;
+        } else if (currentXP < 265000) {
+          xpNeeded = 265000 - currentXP;
+        } else if (currentXP < 305000) {
+          xpNeeded = 305000 - currentXP;
+        } else if (currentXP < 355000) {
+          xpNeeded = 355000 - currentXP;
+        }
+
+        // Output the result
+        output.innerHTML = `You need ${xpNeeded} XP to reach the next level!`;
+      });
+    </script>
+
+  </body>
+</html>
